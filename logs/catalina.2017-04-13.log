@@ -1,0 +1,348 @@
+13-Apr-2017 06:39:21.362 情報 [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+13-Apr-2017 06:39:21.362 情報 [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+13-Apr-2017 06:39:21.364 情報 [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+13-Apr-2017 06:39:21.365 情報 [main] org.apache.catalina.core.StandardService.stopInternal サービス Catalina を停止します
+13-Apr-2017 06:39:21.442 警告 [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [myapp] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+13-Apr-2017 06:39:21.445 情報 [Abandoned connection cleanup thread] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading 不正なアクセス: このWebアプリケーションのインスタンスは既に停止されています  Could not load java.lang.ClassLoader. 不正なアクセスを引き起こしたスレッドを終了させ、投げられたエラーによりデバッグ用に次のスタックトレースが生成されましたが，機能に影響はありません
+ java.lang.IllegalStateException: 不正なアクセス: このWebアプリケーションのインスタンスは既に停止されています  Could not load java.lang.ClassLoader. 不正なアクセスを引き起こしたスレッドを終了させ、投げられたエラーによりデバッグ用に次のスタックトレースが生成されましたが，機能に影響はありません
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1305)
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForClassLoading(WebappClassLoaderBase.java:1293)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1158)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1119)
+	at com.mysql.jdbc.AbandonedConnectionCleanupThread.checkContextClassLoaders(AbandonedConnectionCleanupThread.java:90)
+	at com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+13-Apr-2017 06:39:21.461 情報 [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+13-Apr-2017 06:39:21.463 情報 [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+13-Apr-2017 06:39:21.466 情報 [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+13-Apr-2017 06:39:21.466 情報 [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+13-Apr-2017 06:39:22.563 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.13
+13-Apr-2017 06:39:22.571 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 27 2017 14:25:04 UTC
+13-Apr-2017 06:39:22.571 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.13.0
+13-Apr-2017 06:39:22.572 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+13-Apr-2017 06:39:22.572 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            2.6.32-504.el6.x86_64
+13-Apr-2017 06:39:22.572 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+13-Apr-2017 06:39:22.572 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/java/jdk1.8.0_65/jre
+13-Apr-2017 06:39:22.572 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_65-b17
+13-Apr-2017 06:39:22.572 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+13-Apr-2017 06:39:22.573 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /usr/local/src/apache-tomcat-8.5.13
+13-Apr-2017 06:39:22.573 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /usr/local/src/apache-tomcat-8.5.13
+13-Apr-2017 06:39:22.573 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/usr/local/src/apache-tomcat-8.5.13/conf/logging.properties
+13-Apr-2017 06:39:22.574 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+13-Apr-2017 06:39:22.574 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+13-Apr-2017 06:39:22.574 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+13-Apr-2017 06:39:22.574 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/usr/local/src/apache-tomcat-8.5.13
+13-Apr-2017 06:39:22.575 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/usr/local/src/apache-tomcat-8.5.13
+13-Apr-2017 06:39:22.575 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/usr/local/src/apache-tomcat-8.5.13/temp
+13-Apr-2017 06:39:22.576 情報 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+13-Apr-2017 06:39:22.881 情報 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+13-Apr-2017 06:39:22.944 情報 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+13-Apr-2017 06:39:22.951 情報 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+13-Apr-2017 06:39:22.954 情報 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+13-Apr-2017 06:39:22.957 情報 [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1232 ms
+13-Apr-2017 06:39:23.004 情報 [main] org.apache.catalina.core.StandardService.startInternal サービス Catalina を起動します
+13-Apr-2017 06:39:23.008 情報 [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.13
+13-Apr-2017 06:39:23.026 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Webアプリケーションディレクトリ /usr/local/src/apache-tomcat-8.5.13/webapps/docs を配備します
+13-Apr-2017 06:39:23.793 情報 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Apr-2017 06:39:23.896 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /usr/local/src/apache-tomcat-8.5.13/webapps/docs has finished in 868 ms
+13-Apr-2017 06:39:23.896 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Webアプリケーションディレクトリ /usr/local/src/apache-tomcat-8.5.13/webapps/host-manager を配備します
+13-Apr-2017 06:39:24.138 情報 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Apr-2017 06:39:24.147 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /usr/local/src/apache-tomcat-8.5.13/webapps/host-manager has finished in 251 ms
+13-Apr-2017 06:39:24.147 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Webアプリケーションディレクトリ /usr/local/src/apache-tomcat-8.5.13/webapps/ROOT を配備します
+13-Apr-2017 06:39:24.331 情報 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Apr-2017 06:39:24.356 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /usr/local/src/apache-tomcat-8.5.13/webapps/ROOT has finished in 209 ms
+13-Apr-2017 06:39:24.360 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Webアプリケーションディレクトリ /usr/local/src/apache-tomcat-8.5.13/webapps/manager を配備します
+13-Apr-2017 06:39:24.533 情報 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Apr-2017 06:39:24.538 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /usr/local/src/apache-tomcat-8.5.13/webapps/manager has finished in 178 ms
+13-Apr-2017 06:39:24.543 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Webアプリケーションディレクトリ /usr/local/src/apache-tomcat-8.5.13/webapps/examples を配備します
+13-Apr-2017 06:39:24.978 情報 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Apr-2017 06:39:25.048 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /usr/local/src/apache-tomcat-8.5.13/webapps/examples has finished in 504 ms
+13-Apr-2017 06:39:25.051 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Webアプリケーションディレクトリ /usr/local/src/apache-tomcat-8.5.13/webapps/myapp を配備します
+13-Apr-2017 06:39:25.307 情報 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Apr-2017 06:39:25.316 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /usr/local/src/apache-tomcat-8.5.13/webapps/myapp has finished in 265 ms
+13-Apr-2017 06:39:25.322 情報 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+13-Apr-2017 06:39:25.351 情報 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+13-Apr-2017 06:39:25.367 情報 [main] org.apache.catalina.startup.Catalina.start Server startup in 2409 ms
+13-Apr-2017 06:43:33.855 情報 [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+13-Apr-2017 06:43:33.856 情報 [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+13-Apr-2017 06:43:33.857 情報 [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+13-Apr-2017 06:43:33.858 情報 [main] org.apache.catalina.core.StandardService.stopInternal サービス Catalina を停止します
+13-Apr-2017 06:43:33.945 警告 [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [myapp] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+ com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:64)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ java.lang.Thread.run(Thread.java:745)
+13-Apr-2017 06:43:33.967 情報 [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+13-Apr-2017 06:43:33.969 情報 [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+13-Apr-2017 06:43:33.970 情報 [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+13-Apr-2017 06:43:33.970 情報 [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+13-Apr-2017 06:43:34.996 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.13
+13-Apr-2017 06:43:35.003 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 27 2017 14:25:04 UTC
+13-Apr-2017 06:43:35.003 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.13.0
+13-Apr-2017 06:43:35.004 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+13-Apr-2017 06:43:35.004 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            2.6.32-504.el6.x86_64
+13-Apr-2017 06:43:35.004 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+13-Apr-2017 06:43:35.004 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/java/jdk1.8.0_65/jre
+13-Apr-2017 06:43:35.004 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_65-b17
+13-Apr-2017 06:43:35.004 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+13-Apr-2017 06:43:35.005 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /usr/local/src/apache-tomcat-8.5.13
+13-Apr-2017 06:43:35.005 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /usr/local/src/apache-tomcat-8.5.13
+13-Apr-2017 06:43:35.005 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/usr/local/src/apache-tomcat-8.5.13/conf/logging.properties
+13-Apr-2017 06:43:35.006 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+13-Apr-2017 06:43:35.006 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+13-Apr-2017 06:43:35.006 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+13-Apr-2017 06:43:35.006 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/usr/local/src/apache-tomcat-8.5.13
+13-Apr-2017 06:43:35.010 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/usr/local/src/apache-tomcat-8.5.13
+13-Apr-2017 06:43:35.010 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/usr/local/src/apache-tomcat-8.5.13/temp
+13-Apr-2017 06:43:35.011 情報 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+13-Apr-2017 06:43:35.308 情報 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+13-Apr-2017 06:43:35.351 情報 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+13-Apr-2017 06:43:35.357 情報 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+13-Apr-2017 06:43:35.360 情報 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+13-Apr-2017 06:43:35.363 情報 [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1159 ms
+13-Apr-2017 06:43:35.409 情報 [main] org.apache.catalina.core.StandardService.startInternal サービス Catalina を起動します
+13-Apr-2017 06:43:35.409 情報 [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.13
+13-Apr-2017 06:43:35.458 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Webアプリケーションディレクトリ /usr/local/src/apache-tomcat-8.5.13/webapps/docs を配備します
+13-Apr-2017 06:43:36.210 情報 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Apr-2017 06:43:36.311 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /usr/local/src/apache-tomcat-8.5.13/webapps/docs has finished in 852 ms
+13-Apr-2017 06:43:36.315 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Webアプリケーションディレクトリ /usr/local/src/apache-tomcat-8.5.13/webapps/host-manager を配備します
+13-Apr-2017 06:43:36.558 情報 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Apr-2017 06:43:36.570 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /usr/local/src/apache-tomcat-8.5.13/webapps/host-manager has finished in 255 ms
+13-Apr-2017 06:43:36.570 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Webアプリケーションディレクトリ /usr/local/src/apache-tomcat-8.5.13/webapps/ROOT を配備します
+13-Apr-2017 06:43:36.748 情報 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Apr-2017 06:43:36.773 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /usr/local/src/apache-tomcat-8.5.13/webapps/ROOT has finished in 203 ms
+13-Apr-2017 06:43:36.774 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Webアプリケーションディレクトリ /usr/local/src/apache-tomcat-8.5.13/webapps/manager を配備します
+13-Apr-2017 06:43:36.963 情報 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Apr-2017 06:43:36.972 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /usr/local/src/apache-tomcat-8.5.13/webapps/manager has finished in 196 ms
+13-Apr-2017 06:43:36.973 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Webアプリケーションディレクトリ /usr/local/src/apache-tomcat-8.5.13/webapps/examples を配備します
+13-Apr-2017 06:43:37.378 情報 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Apr-2017 06:43:37.453 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /usr/local/src/apache-tomcat-8.5.13/webapps/examples has finished in 479 ms
+13-Apr-2017 06:43:37.456 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Webアプリケーションディレクトリ /usr/local/src/apache-tomcat-8.5.13/webapps/myapp を配備します
+13-Apr-2017 06:43:37.705 情報 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Apr-2017 06:43:37.714 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /usr/local/src/apache-tomcat-8.5.13/webapps/myapp has finished in 258 ms
+13-Apr-2017 06:43:37.720 情報 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+13-Apr-2017 06:43:37.750 情報 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+13-Apr-2017 06:43:37.766 情報 [main] org.apache.catalina.startup.Catalina.start Server startup in 2402 ms
+13-Apr-2017 06:52:42.084 情報 [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+13-Apr-2017 06:52:42.085 情報 [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+13-Apr-2017 06:52:42.087 情報 [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+13-Apr-2017 06:52:42.087 情報 [main] org.apache.catalina.core.StandardService.stopInternal サービス Catalina を停止します
+13-Apr-2017 06:52:42.166 警告 [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [myapp] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+13-Apr-2017 06:52:42.173 情報 [Abandoned connection cleanup thread] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading 不正なアクセス: このWebアプリケーションのインスタンスは既に停止されています  Could not load java.lang.ClassLoader. 不正なアクセスを引き起こしたスレッドを終了させ、投げられたエラーによりデバッグ用に次のスタックトレースが生成されましたが，機能に影響はありません
+ java.lang.IllegalStateException: 不正なアクセス: このWebアプリケーションのインスタンスは既に停止されています  Could not load java.lang.ClassLoader. 不正なアクセスを引き起こしたスレッドを終了させ、投げられたエラーによりデバッグ用に次のスタックトレースが生成されましたが，機能に影響はありません
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1305)
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForClassLoading(WebappClassLoaderBase.java:1293)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1158)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1119)
+	at com.mysql.jdbc.AbandonedConnectionCleanupThread.checkContextClassLoaders(AbandonedConnectionCleanupThread.java:90)
+	at com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+13-Apr-2017 06:52:42.193 情報 [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+13-Apr-2017 06:52:42.194 情報 [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+13-Apr-2017 06:52:42.195 情報 [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+13-Apr-2017 06:52:42.195 情報 [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+13-Apr-2017 06:52:43.246 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.13
+13-Apr-2017 06:52:43.250 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 27 2017 14:25:04 UTC
+13-Apr-2017 06:52:43.250 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.13.0
+13-Apr-2017 06:52:43.251 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+13-Apr-2017 06:52:43.251 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            2.6.32-504.el6.x86_64
+13-Apr-2017 06:52:43.251 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+13-Apr-2017 06:52:43.251 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/java/jdk1.8.0_65/jre
+13-Apr-2017 06:52:43.251 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_65-b17
+13-Apr-2017 06:52:43.251 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+13-Apr-2017 06:52:43.256 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /usr/local/src/apache-tomcat-8.5.13
+13-Apr-2017 06:52:43.256 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /usr/local/src/apache-tomcat-8.5.13
+13-Apr-2017 06:52:43.256 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/usr/local/src/apache-tomcat-8.5.13/conf/logging.properties
+13-Apr-2017 06:52:43.256 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+13-Apr-2017 06:52:43.257 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+13-Apr-2017 06:52:43.257 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+13-Apr-2017 06:52:43.257 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/usr/local/src/apache-tomcat-8.5.13
+13-Apr-2017 06:52:43.257 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/usr/local/src/apache-tomcat-8.5.13
+13-Apr-2017 06:52:43.258 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/usr/local/src/apache-tomcat-8.5.13/temp
+13-Apr-2017 06:52:43.258 情報 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+13-Apr-2017 06:52:43.557 情報 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+13-Apr-2017 06:52:43.595 情報 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+13-Apr-2017 06:52:43.604 情報 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+13-Apr-2017 06:52:43.607 情報 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+13-Apr-2017 06:52:43.610 情報 [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1181 ms
+13-Apr-2017 06:52:43.665 情報 [main] org.apache.catalina.core.StandardService.startInternal サービス Catalina を起動します
+13-Apr-2017 06:52:43.665 情報 [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.13
+13-Apr-2017 06:52:43.707 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Webアプリケーションディレクトリ /usr/local/src/apache-tomcat-8.5.13/webapps/docs を配備します
+13-Apr-2017 06:52:44.523 情報 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Apr-2017 06:52:44.628 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /usr/local/src/apache-tomcat-8.5.13/webapps/docs has finished in 916 ms
+13-Apr-2017 06:52:44.628 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Webアプリケーションディレクトリ /usr/local/src/apache-tomcat-8.5.13/webapps/host-manager を配備します
+13-Apr-2017 06:52:44.879 情報 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Apr-2017 06:52:44.888 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /usr/local/src/apache-tomcat-8.5.13/webapps/host-manager has finished in 259 ms
+13-Apr-2017 06:52:44.891 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Webアプリケーションディレクトリ /usr/local/src/apache-tomcat-8.5.13/webapps/ROOT を配備します
+13-Apr-2017 06:52:45.073 情報 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Apr-2017 06:52:45.100 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /usr/local/src/apache-tomcat-8.5.13/webapps/ROOT has finished in 209 ms
+13-Apr-2017 06:52:45.101 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Webアプリケーションディレクトリ /usr/local/src/apache-tomcat-8.5.13/webapps/manager を配備します
+13-Apr-2017 06:52:45.306 情報 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Apr-2017 06:52:45.314 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /usr/local/src/apache-tomcat-8.5.13/webapps/manager has finished in 213 ms
+13-Apr-2017 06:52:45.317 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Webアプリケーションディレクトリ /usr/local/src/apache-tomcat-8.5.13/webapps/examples を配備します
+13-Apr-2017 06:52:45.733 情報 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Apr-2017 06:52:45.807 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /usr/local/src/apache-tomcat-8.5.13/webapps/examples has finished in 489 ms
+13-Apr-2017 06:52:45.808 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Webアプリケーションディレクトリ /usr/local/src/apache-tomcat-8.5.13/webapps/myapp を配備します
+13-Apr-2017 06:52:46.089 情報 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Apr-2017 06:52:46.101 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /usr/local/src/apache-tomcat-8.5.13/webapps/myapp has finished in 290 ms
+13-Apr-2017 06:52:46.105 情報 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+13-Apr-2017 06:52:46.134 情報 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+13-Apr-2017 06:52:46.150 情報 [main] org.apache.catalina.startup.Catalina.start Server startup in 2538 ms
+13-Apr-2017 06:55:25.816 情報 [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+13-Apr-2017 06:55:25.816 情報 [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+13-Apr-2017 06:55:25.819 情報 [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+13-Apr-2017 06:55:25.820 情報 [main] org.apache.catalina.core.StandardService.stopInternal サービス Catalina を停止します
+13-Apr-2017 06:55:25.910 警告 [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [myapp] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+13-Apr-2017 06:55:25.916 情報 [Abandoned connection cleanup thread] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading 不正なアクセス: このWebアプリケーションのインスタンスは既に停止されています  Could not load java.lang.ClassLoader. 不正なアクセスを引き起こしたスレッドを終了させ、投げられたエラーによりデバッグ用に次のスタックトレースが生成されましたが，機能に影響はありません
+ java.lang.IllegalStateException: 不正なアクセス: このWebアプリケーションのインスタンスは既に停止されています  Could not load java.lang.ClassLoader. 不正なアクセスを引き起こしたスレッドを終了させ、投げられたエラーによりデバッグ用に次のスタックトレースが生成されましたが，機能に影響はありません
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1305)
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForClassLoading(WebappClassLoaderBase.java:1293)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1158)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1119)
+	at com.mysql.jdbc.AbandonedConnectionCleanupThread.checkContextClassLoaders(AbandonedConnectionCleanupThread.java:90)
+	at com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+13-Apr-2017 06:55:25.933 情報 [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+13-Apr-2017 06:55:25.935 情報 [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+13-Apr-2017 06:55:25.936 情報 [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+13-Apr-2017 06:55:25.936 情報 [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+13-Apr-2017 06:55:26.953 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.13
+13-Apr-2017 06:55:26.957 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 27 2017 14:25:04 UTC
+13-Apr-2017 06:55:26.957 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.13.0
+13-Apr-2017 06:55:26.960 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+13-Apr-2017 06:55:26.960 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            2.6.32-504.el6.x86_64
+13-Apr-2017 06:55:26.960 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+13-Apr-2017 06:55:26.960 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/java/jdk1.8.0_65/jre
+13-Apr-2017 06:55:26.960 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_65-b17
+13-Apr-2017 06:55:26.960 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+13-Apr-2017 06:55:26.961 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /usr/local/src/apache-tomcat-8.5.13
+13-Apr-2017 06:55:26.961 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /usr/local/src/apache-tomcat-8.5.13
+13-Apr-2017 06:55:26.962 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/usr/local/src/apache-tomcat-8.5.13/conf/logging.properties
+13-Apr-2017 06:55:26.962 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+13-Apr-2017 06:55:26.962 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+13-Apr-2017 06:55:26.962 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+13-Apr-2017 06:55:26.962 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/usr/local/src/apache-tomcat-8.5.13
+13-Apr-2017 06:55:26.963 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/usr/local/src/apache-tomcat-8.5.13
+13-Apr-2017 06:55:26.964 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/usr/local/src/apache-tomcat-8.5.13/temp
+13-Apr-2017 06:55:26.964 情報 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+13-Apr-2017 06:55:27.258 情報 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+13-Apr-2017 06:55:27.298 情報 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+13-Apr-2017 06:55:27.308 情報 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+13-Apr-2017 06:55:27.311 情報 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+13-Apr-2017 06:55:27.314 情報 [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1153 ms
+13-Apr-2017 06:55:27.361 情報 [main] org.apache.catalina.core.StandardService.startInternal サービス Catalina を起動します
+13-Apr-2017 06:55:27.365 情報 [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.13
+13-Apr-2017 06:55:27.406 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Webアプリケーションディレクトリ /usr/local/src/apache-tomcat-8.5.13/webapps/docs を配備します
+13-Apr-2017 06:55:28.169 情報 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Apr-2017 06:55:28.266 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /usr/local/src/apache-tomcat-8.5.13/webapps/docs has finished in 858 ms
+13-Apr-2017 06:55:28.269 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Webアプリケーションディレクトリ /usr/local/src/apache-tomcat-8.5.13/webapps/host-manager を配備します
+13-Apr-2017 06:55:28.506 情報 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Apr-2017 06:55:28.518 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /usr/local/src/apache-tomcat-8.5.13/webapps/host-manager has finished in 248 ms
+13-Apr-2017 06:55:28.518 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Webアプリケーションディレクトリ /usr/local/src/apache-tomcat-8.5.13/webapps/ROOT を配備します
+13-Apr-2017 06:55:28.694 情報 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Apr-2017 06:55:28.723 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /usr/local/src/apache-tomcat-8.5.13/webapps/ROOT has finished in 205 ms
+13-Apr-2017 06:55:28.724 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Webアプリケーションディレクトリ /usr/local/src/apache-tomcat-8.5.13/webapps/manager を配備します
+13-Apr-2017 06:55:28.932 情報 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Apr-2017 06:55:28.940 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /usr/local/src/apache-tomcat-8.5.13/webapps/manager has finished in 216 ms
+13-Apr-2017 06:55:28.940 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Webアプリケーションディレクトリ /usr/local/src/apache-tomcat-8.5.13/webapps/examples を配備します
+13-Apr-2017 06:55:29.344 情報 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Apr-2017 06:55:29.413 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /usr/local/src/apache-tomcat-8.5.13/webapps/examples has finished in 473 ms
+13-Apr-2017 06:55:29.417 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Webアプリケーションディレクトリ /usr/local/src/apache-tomcat-8.5.13/webapps/myapp を配備します
+13-Apr-2017 06:55:29.654 情報 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Apr-2017 06:55:29.663 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /usr/local/src/apache-tomcat-8.5.13/webapps/myapp has finished in 246 ms
+13-Apr-2017 06:55:29.667 情報 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+13-Apr-2017 06:55:29.697 情報 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+13-Apr-2017 06:55:29.714 情報 [main] org.apache.catalina.startup.Catalina.start Server startup in 2399 ms
+13-Apr-2017 06:57:43.225 情報 [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+13-Apr-2017 06:57:43.225 情報 [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+13-Apr-2017 06:57:43.227 情報 [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+13-Apr-2017 06:57:43.230 情報 [main] org.apache.catalina.core.StandardService.stopInternal サービス Catalina を停止します
+13-Apr-2017 06:57:43.313 警告 [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [myapp] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+13-Apr-2017 06:57:43.315 情報 [Abandoned connection cleanup thread] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading 不正なアクセス: このWebアプリケーションのインスタンスは既に停止されています  Could not load java.lang.ClassLoader. 不正なアクセスを引き起こしたスレッドを終了させ、投げられたエラーによりデバッグ用に次のスタックトレースが生成されましたが，機能に影響はありません
+ java.lang.IllegalStateException: 不正なアクセス: このWebアプリケーションのインスタンスは既に停止されています  Could not load java.lang.ClassLoader. 不正なアクセスを引き起こしたスレッドを終了させ、投げられたエラーによりデバッグ用に次のスタックトレースが生成されましたが，機能に影響はありません
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1305)
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForClassLoading(WebappClassLoaderBase.java:1293)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1158)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1119)
+	at com.mysql.jdbc.AbandonedConnectionCleanupThread.checkContextClassLoaders(AbandonedConnectionCleanupThread.java:90)
+	at com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+13-Apr-2017 06:57:43.338 情報 [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+13-Apr-2017 06:57:43.339 情報 [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+13-Apr-2017 06:57:43.340 情報 [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+13-Apr-2017 06:57:43.340 情報 [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+13-Apr-2017 06:57:44.358 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.13
+13-Apr-2017 06:57:44.362 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 27 2017 14:25:04 UTC
+13-Apr-2017 06:57:44.362 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.13.0
+13-Apr-2017 06:57:44.362 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+13-Apr-2017 06:57:44.362 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            2.6.32-504.el6.x86_64
+13-Apr-2017 06:57:44.363 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+13-Apr-2017 06:57:44.363 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/java/jdk1.8.0_65/jre
+13-Apr-2017 06:57:44.363 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_65-b17
+13-Apr-2017 06:57:44.363 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+13-Apr-2017 06:57:44.366 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /usr/local/src/apache-tomcat-8.5.13
+13-Apr-2017 06:57:44.366 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /usr/local/src/apache-tomcat-8.5.13
+13-Apr-2017 06:57:44.366 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/usr/local/src/apache-tomcat-8.5.13/conf/logging.properties
+13-Apr-2017 06:57:44.366 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+13-Apr-2017 06:57:44.367 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+13-Apr-2017 06:57:44.367 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+13-Apr-2017 06:57:44.367 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/usr/local/src/apache-tomcat-8.5.13
+13-Apr-2017 06:57:44.367 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/usr/local/src/apache-tomcat-8.5.13
+13-Apr-2017 06:57:44.368 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/usr/local/src/apache-tomcat-8.5.13/temp
+13-Apr-2017 06:57:44.368 情報 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+13-Apr-2017 06:57:44.667 情報 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+13-Apr-2017 06:57:44.712 情報 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+13-Apr-2017 06:57:44.717 情報 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+13-Apr-2017 06:57:44.720 情報 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+13-Apr-2017 06:57:44.724 情報 [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1151 ms
+13-Apr-2017 06:57:44.768 情報 [main] org.apache.catalina.core.StandardService.startInternal サービス Catalina を起動します
+13-Apr-2017 06:57:44.769 情報 [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.13
+13-Apr-2017 06:57:44.817 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Webアプリケーションディレクトリ /usr/local/src/apache-tomcat-8.5.13/webapps/docs を配備します
+13-Apr-2017 06:57:45.576 情報 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Apr-2017 06:57:45.674 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /usr/local/src/apache-tomcat-8.5.13/webapps/docs has finished in 856 ms
+13-Apr-2017 06:57:45.678 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Webアプリケーションディレクトリ /usr/local/src/apache-tomcat-8.5.13/webapps/host-manager を配備します
+13-Apr-2017 06:57:45.912 情報 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Apr-2017 06:57:45.926 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /usr/local/src/apache-tomcat-8.5.13/webapps/host-manager has finished in 248 ms
+13-Apr-2017 06:57:45.926 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Webアプリケーションディレクトリ /usr/local/src/apache-tomcat-8.5.13/webapps/ROOT を配備します
+13-Apr-2017 06:57:46.118 情報 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Apr-2017 06:57:46.139 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /usr/local/src/apache-tomcat-8.5.13/webapps/ROOT has finished in 213 ms
+13-Apr-2017 06:57:46.143 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Webアプリケーションディレクトリ /usr/local/src/apache-tomcat-8.5.13/webapps/manager を配備します
+13-Apr-2017 06:57:46.346 情報 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Apr-2017 06:57:46.349 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /usr/local/src/apache-tomcat-8.5.13/webapps/manager has finished in 206 ms
+13-Apr-2017 06:57:46.352 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Webアプリケーションディレクトリ /usr/local/src/apache-tomcat-8.5.13/webapps/examples を配備します
+13-Apr-2017 06:57:46.756 情報 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Apr-2017 06:57:46.831 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /usr/local/src/apache-tomcat-8.5.13/webapps/examples has finished in 479 ms
+13-Apr-2017 06:57:46.831 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Webアプリケーションディレクトリ /usr/local/src/apache-tomcat-8.5.13/webapps/myapp を配備します
+13-Apr-2017 06:57:47.063 情報 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Apr-2017 06:57:47.075 情報 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /usr/local/src/apache-tomcat-8.5.13/webapps/myapp has finished in 244 ms
+13-Apr-2017 06:57:47.081 情報 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+13-Apr-2017 06:57:47.108 情報 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+13-Apr-2017 06:57:47.138 情報 [main] org.apache.catalina.startup.Catalina.start Server startup in 2413 ms
+13-Apr-2017 17:25:39.265 情報 [http-nio-8080-exec-9] org.apache.coyote.http11.Http11Processor.service Error parsing HTTP request header
+ Note: further occurrences of HTTP header parsing errors will be logged at DEBUG level.
+ java.lang.IllegalArgumentException: Invalid character found in method name. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:422)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:683)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
