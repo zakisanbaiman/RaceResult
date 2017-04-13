@@ -4,7 +4,7 @@ import java.awt.List;
 import java.io.*;
 import java.util.ArrayList;
 
-public class RaceResult {
+public class GetRaceResult {
 
     private String userId = "＜未設定＞";
     
@@ -65,8 +65,8 @@ public class RaceResult {
             return "SQL failed.";
         } catch (ClassNotFoundException ex) {
             ex.printStackTrace ();
-            return "ClassNFE";
+            return "ClassNotFoundException";
         }
-    return "retuuuuuuun!";
+    return "All OK!";
     }
 }

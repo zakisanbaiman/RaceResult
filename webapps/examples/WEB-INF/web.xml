@@ -142,8 +142,8 @@
         <servlet-class>RequestParamExample</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>RaceResult</servlet-name>
-        <servlet-class>RaceResult</servlet-class>
+        <servlet-name>InsertResult</servlet-name>
+        <servlet-class>InsertResult</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>CookieExample</servlet-name>
@@ -175,8 +175,8 @@
         <url-pattern>/servlets/servlet/RequestParamExample</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>RaceResult</servlet-name>
-        <url-pattern>/servlets/servlet/RaceResult</url-pattern>
+        <servlet-name>InsertResult</servlet-name>
+        <url-pattern>/servlets/servlet/InsertResult</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>CookieExample</servlet-name>

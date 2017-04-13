@@ -1,6 +1,6 @@
 <%@ page contentType="text/html; charset=utf-8" %>
 
-<jsp:useBean id="user" class="sample.RaceResult" />
+<jsp:useBean id="user" class="sample.GetRaceResult" />
 
 <html>
     <head>

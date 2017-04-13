@@ -23,7 +23,7 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script type="text/javascript">
     </script>
-    <form class="form-horizontal" action="servlets/servlet/RaceResult" method="post">
+    <form class="form-horizontal" action="servlets/servlet/InsertResult" method="post">
         <%-- id --%>
         <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">id</label>
